@@ -1,82 +1,122 @@
 package resolvers
 
-import (
-	"errors"
-
-	"github.com/graphql-go/graphql/gqlerrors"
-)
-
-type StarWarsChar struct {
-	ID              int
-	Name            string
-	Friends         []StarWarsChar
-	AppearsIn       []int
-	HomePlanet      string
-	PrimaryFunction string
+//User struct
+type User struct {
+	ID       string `json:"id"`
+	Username string `json:"username"`
+	Password string `json:"password"`
 }
 
-var Luke = StarWarsChar{
-	ID:         1000,
-	Name:       "Luke Skywalker",
-	AppearsIn:  []int{4, 5, 6},
-	HomePlanet: "Tatooine",
+//Price struct
+type Price struct {
+	Label  string   `json:"label"`
+	Number string   `json:"number"`
+	Lapse  string   `json:"lapse"`
+	Desc   []string `json:"descBasic"`
 }
 
-var Vader = StarWarsChar{
-	ID:         1001,
-	Name:       "Darth Vader",
-	AppearsIn:  []int{4, 5, 6},
-	HomePlanet: "Tatooine",
+//Service struct
+type Service struct {
+	Title    string `json:"title"`
+	SubTitle string `json:"subTitle"`
+	Desc     string `json:"desc"`
+	SrcBg    string `json:"srcBg"`
 }
 
-var Han = StarWarsChar{
-	ID:         1002,
-	Name:       "Han Solo",
-	HomePlanet: "Alderaa",
-	AppearsIn:  []int{4, 5, 6},
+//FactsAboutMe struct
+type FactsAboutMe struct {
+	LblAge       string `json:"lblAge"`
+	Age          string `json:"age"`
+	LblResidence string `json:"lblResidence"`
+	Residence    string `json:"residence"`
+	LblState     string `json:"lblState"`
+	State        string `json:"state"`
 }
 
-var Leia = StarWarsChar{
-	ID:         1003,
-	Name:       "Leia Organa",
-	AppearsIn:  []int{4, 5, 6},
-	HomePlanet: "Alderaa",
+//CodingSkill struct
+type CodingSkill struct {
+	NumberOne string `json:"numberOne"`
+	LabelOne  string `json:"labelOne"`
+	NumberTwo string `json:"numberTwo"`
+	LabelTwo  string `json:"labelTwo"`
 }
 
-var Tarkin = StarWarsChar{
-	ID:         1004,
-	Name:       "Wilhuff Tarkin",
-	AppearsIn:  []int{4},
-	HomePlanet: "Alderaa",
-}
-var Threepio = StarWarsChar{
-	ID:              2000,
-	Name:            "C-3PO",
-	AppearsIn:       []int{4, 5, 6},
-	PrimaryFunction: "Protocol",
-}
-var Artoo = StarWarsChar{
-	ID:              2001,
-	Name:            "R2-D2",
-	AppearsIn:       []int{4, 5, 6},
-	PrimaryFunction: "Astromech",
+//LanguageSkill struct
+type LanguageSkill struct {
+	Language string `json:"language"`
+	Rating   string `json:"rating"`
 }
 
-var HumanData = []StarWarsChar{
-	Luke,
-	Vader,
-	Han,
-	Leia,
-	Tarkin,
-	Threepio,
-	Artoo,
+//LinearSkill struct
+type LinearSkill struct {
+	Name    string `json:"name"`
+	Percent string `json:"percent"`
 }
 
-func GetHuman(id int) (StarWarsChar, error) {
-	for _, human := range HumanData {
-		if human.ID == id {
-			return human, nil
-		}
-	}
-	return StarWarsChar{}, gqlerrors.FormatError(errors.New("cound not find the person with given id"))
+//Experience struct
+type Experience struct {
+	Lapse    string `json:"lapse"`
+	Position string `json:"position"`
+	Title    string `json:"title"`
+	Desc     string `json:"desc"`
+}
+
+//Education struct
+type Education struct {
+	Lapse    string `json:"lapse"`
+	Position string `json:"position"`
+	Title    string `json:"title"`
+	Desc     string `json:"desc"`
+}
+
+//Testimonial struct
+type Testimonial struct {
+	Name        string `json:"name"`
+	Testimonial string `json:"testimonial"`
+}
+
+//Client struct
+type Client struct {
+	Client string `json:"client"`
+	SrcBg  string `json:"srcBg"`
+}
+
+//FunFact struct
+type FunFact struct {
+	Number string   `json:"number"`
+	Desc   []string `json:"desc"`
+}
+
+//CV struct
+type CV struct {
+	ID              int             `json:"id"`
+	FullName        string          `json:"fullName"`
+	Degree          string          `json:"degree"`
+	MenuList        []string        `json:"menuList"`
+	AboutMe         string          `json:"aboutMe"`
+	FactsAboutMe    FactsAboutMe    `json:"factsAboutMe"`
+	LblMyServices   string          `json:"lblMyServices"`
+	Services        []Service       `json:"services"`
+	LblPricing      string          `json:"lblPricing"`
+	Price           []Price         `json:"price"`
+	LblFunFacts     string          `json:"lblFunFacts"`
+	FunFacts        []FunFact       `json:"FunFacts"`
+	LblClients      string          `json:"lblClients"`
+	Clients         []Client        `json:"clients"`
+	LblTestimonials string          `json:"lblTestimonials"`
+	Testimonials    []Testimonial   `json:"testimonials"`
+	LblResume       string          `json:"lblResume"`
+	LblExperience   string          `json:"lblExperience"`
+	Experience      []Experience    `json:"experience"`
+	LblEducation    string          `json:"lblEducation"`
+	Education       []Education     `json:"education"`
+	LblMySkills     string          `json:"lblMySkills"`
+	LblDesign       string          `json:"lblDesign"`
+	LinearSkills    []LinearSkill   `json:"linearSkills"`
+	LblLanguage     string          `json:"lblLanguage"`
+	LanguageSkills  []LanguageSkill `json:"languageSkills"`
+	LblCoding       string          `json:"lblCoding"`
+	CodingSkills    []CodingSkill   `json:"codingSkills"`
+	KnowledgeSkills []string        `json:"knowledgeSkills"`
+	LblKnowledge    string          `json:"lblKnowledge"`
 }

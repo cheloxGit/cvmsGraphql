@@ -3,24 +3,21 @@ package schema
 import (
 	"fmt"
 
+	"github.com/cheloxGit/cvmsGraphql/resolvers"
+	"github.com/cheloxGit/cvmsGraphql/types"
 	"github.com/graphql-go/graphql"
-	// "github.com/graphql-go/graphql/gqlerrors"
-	// "github.com/graphql-go/graphql"
-	// "github.com/gufranmirza/go-graphql-swapi/go-greaphql-part-5/after/auth"
-	// "github.com/gufranmirza/go-graphql-swapi/go-greaphql-part-5/after/resolvers"
-	// "github.com/gufranmirza/go-graphql-swapi/go-greaphql-part-5/after/types"
 )
 
 // GqlSchema Define the GraphQL Schema
-func GqlSchema(queryCV func() []CV) graphql.Schema {
+func GqlSchema(queryCV func() []resolvers.CV) graphql.Schema {
 	fields := graphql.Fields{
 		"cvms": &graphql.Field{
-			Type:        graphql.NewList(cvType),
+			Type:        graphql.NewList(types.CvType),
 			Description: "All CVs",
 			Resolve: func(params graphql.ResolveParams) (interface{}, error) {
 				// fmt.Println("ValidateJWT: params.Context.Value(token).(string)")
 				// fmt.Println(params.Context.Value("token").(string))
-				// _, err := ValidateJWT(params.Context.Value("token").(string))
+				// _, err := auth.ValidateJWT(params.Context.Value("token").(string))
 				// fmt.Println("ValidateJWT: err")
 				// fmt.Println(err)
 				// if err != nil {
@@ -42,7 +39,7 @@ func GqlSchema(queryCV func() []CV) graphql.Schema {
 			},
 		},
 		"cvmsid": &graphql.Field{
-			Type:        cvType,
+			Type:        types.CvType,
 			Description: "Get CVs by ID",
 			Args: graphql.FieldConfigArgument{
 				"id": &graphql.ArgumentConfig{

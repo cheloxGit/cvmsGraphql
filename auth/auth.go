@@ -1,20 +1,23 @@
 package auth
 
 import (
+	"encoding/json"
 	"errors"
 	"fmt"
+	"net/http"
 
+	"github.com/cheloxGit/cvmsGraphql/resolvers"
 	jwt "github.com/dgrijalva/jwt-go"
-	"github.com/graphql-go/graphql/gqlerrors"
+	"github.com/mitchellh/mapstructure"
 )
 
-var jwtSecret []byte = []byte("so secret!!")
+var jwtSecret []byte = []byte("thepolyglotdeveloper")
 
-func ValidateToken(t string) (bool, error) {
+//ValidateJWT func
+func ValidateJWT(t string) (interface{}, error) {
 	if t == "" {
-		return false, gqlerrors.FormatError(errors.New("Authorization token must be present"))
+		return nil, errors.New("Authorization token must be present")
 	}
-
 	token, _ := jwt.Parse(t, func(token *jwt.Token) (interface{}, error) {
 		if _, ok := token.Method.(*jwt.SigningMethodHMAC); !ok {
 			return nil, fmt.Errorf("There was an error")
@@ -22,22 +25,27 @@ func ValidateToken(t string) (bool, error) {
 		return jwtSecret, nil
 	})
 
-	if _, ok := token.Claims.(jwt.MapClaims); ok && token.Valid {
-		return true, nil
+	if claims, ok := token.Claims.(jwt.MapClaims); ok && token.Valid {
+		var decodedToken interface{}
+		mapstructure.Decode(claims, &decodedToken)
+		return decodedToken, nil
 	} else {
-		return false, gqlerrors.FormatError(errors.New("Invalid authorization token"))
+		return nil, errors.New("Invalid authorization token")
 	}
 }
 
-func CreateToken(username, password string) (string, error) {
+//CreateTokenEndpoint func
+func CreateTokenEndpoint(response http.ResponseWriter, request *http.Request) {
+	var user resolvers.User
+	_ = json.NewDecoder(request.Body).Decode(&user)
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
-		"username": username,
-		"password": password,
+		"username": user.Username,
+		"password": user.Password,
 	})
-	tokenString, err := token.SignedString(jwtSecret)
-	if err != nil {
-		return "", gqlerrors.FormatError(err)
+	tokenString, error := token.SignedString(jwtSecret)
+	if error != nil {
+		fmt.Println(error)
 	}
-
-	return tokenString, nil
+	response.Header().Set("content-type", "application/json")
+	response.Write([]byte(`{ "token": "` + tokenString + `" }`))
 }
