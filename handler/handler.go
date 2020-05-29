@@ -6,10 +6,16 @@ import (
 	"fmt"
 	"net/http"
 
+	"github.com/cheloxGit/cvmsGraphql/data"
 	"github.com/cheloxGit/cvmsGraphql/schema"
 	"github.com/graphql-go/graphql"
 )
 
+type reqBody struct {
+	Query string `json:"query"`
+}
+
+//GqlHandler func
 func GqlHandler() http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		if r.Body == nil {
@@ -33,10 +39,7 @@ func GqlHandler() http.Handler {
 	})
 }
 
-// func enableCors(w *http.ResponseWriter) {
-// 	(*w).Header().Set("Access-Control-Allow-Origin", "*")
-// }
-
+//ProcessQuery func
 func ProcessQuery(token string, query string) (result string) {
 
 	retrieveCVMS := data.RetrieveCVMSFromFile()
