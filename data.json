@@ -1,0 +1,131 @@
+[
+    {
+        "id": 1,
+        "fullName": "Marcelo Sanchez",
+        "degree": "Systems Engineer",
+        "menuList": ["About Me", "Resume", "Works"],
+        "aboutMe": "My name is Marcelo Sanchez Salazar, Freelancer. I have rich experience in web site design and building and customization, also I am good at wordpress. I love to talk with you about our unique.",
+        "factsAboutMe":{
+            "lblAge":"Age",
+            "age": "39",
+            "lblResidence": "Residence",
+            "residence": "Bolivia",
+            "lblState": "Freelance",
+            "state": "Available"
+            },
+        "lblMyServices":"My Services",
+        "services": [
+            {"title":"Web Development","subTitle":"Vue.js","desc":"This CV was development under Vue.js. Here is the Product","src_bg":"https://cdn.vuetifyjs.com/images/cards/docks.jpg"},
+            {"title":"Mobile Hybrid Dev","subTitle":"Flutter","desc":"Recently work with Flutter to deploy.Here is the Product","src_bg":"https://cdn.vuetifyjs.com/images/cards/docks.jpg"},
+            {"title":"Python Developer","subTitle":"Python as Backservice","desc":"Python as Backservice Working on multiple projects with Python, Pandas, Requests, Selenium, API, etc. Here is the Product","src_bg":"https://cdn.vuetifyjs.com/images/cards/docks.jpg"},
+            {"title":"Robotics Dev","subTitle":"Arduino and Raspberry PI","desc":"Private works with Arduino, NodeMCU, Raspberry PI, GSM, CNC, Follow cars, etc. Here is the Product","src_bg":"https://cdn.vuetifyjs.com/images/cards/docks.jpg"}
+        ],
+        "lblPricing":"Pricing",
+        "price": [
+            {   "label":"Basic",
+                "number":"15",
+                "lapse":"hour",
+                "desc":[
+                    "Web Development",
+                    "Advertising",
+                    "Game Development",
+                    "Music Writing",
+                    "Photography"
+                ],
+                "labelBuy":"BUY BASIC"
+            },{
+                "label":"Pro",
+                "number":"20",
+                "lapse":"hour",
+                "desc":[
+                    "Web Development",
+                    "Advertising",
+                    "Game Development",
+                    "Music Writing",
+                    "Photography"
+                ],
+                "labelBuy":"BUY PRO"
+            }
+        ],
+        "lblFunFacts":"Fun Facts",
+        "funFacts": [
+            {
+                "number":"80",
+                "desc":[
+                    "Albumes",
+                    "Listened"
+                ]
+            },
+            {
+                "number":"80",
+                "desc":[
+                    "Albumes",
+                    "Listened"
+                ]
+            },
+            {
+                "number":"80",
+                "desc":[
+                    "Albumes",
+                    "Listened"
+                ]
+            },
+            {
+                "number":"80",
+                "desc":[
+                    "Albumes",
+                    "Listened"
+                ]
+            }
+        ],
+        "lblClients":"Clients",
+        "clients":[
+            {"client":"NerdsOnSite","srcBg":"https://www.nerdsonsite.com/wp-content/uploads/2019/07/nerds-on-site-car@2x.png"},
+            {"client":"OneExtraGuy","srcBg":"https://oneextraguy.com/wp-content/uploads/2017/02/logo.jpg"},
+            {"client":"Goopy Inc.","srcBg":"https://oneextraguy.com/wp-content/uploads/2017/02/logo.jpg"},
+            {"client":"Sanchez Constructora","srcBg":"https://oneextraguy.com/wp-content/uploads/2017/02/logo.jpg"}
+        ],
+        "lblTestimonials":"Testimonials",
+        "testimonials":[
+            {"name": "Marcelo", "testimonial":"Great work!"},
+            {"name": "Juan Paco", "testimonial":"Beautiful designs!"},
+            {"name": "Pedro", "testimonial":"Innovative!"}
+        ],
+        "lblResume":"Resume",
+        "lblExperience":"Experience",
+        "experience":[
+            {"lapse":"2017 - Present","position":"CEO","title":"'Nine Brains Corp.","desc":"Collaborate with creative and development teams on the execution of ideas."},
+            {"lapse":"2010 - 2018","position":"Developer","title":"Viva D.R.","desc":"Worked in Viva Republica Dominicana, areas Datawarehouse, DevOps, OracleSQL, PHP, PLSQL."}
+        ],
+        "lblEducation":"Education",
+        "education":[
+            {"lapse":"2010 - 2018","position":"UMSS","title":"'Engineer System","desc":"Time studying in UMSS and knowledge"},
+            {"lapse":"2010 - 2018","position":"Developer","title":"Viva D.R.","desc":"Worked in Viva Republica Dominicana, areas Datawarehouse, DevOps, OracleSQL, PHP, PLSQL."}
+        ],
+        "lblMySkills":"My Skills",
+        "lblDesign":"Design",
+        "linearSkills":[
+            {"name":  "Web Design", "percent": "80"},
+            {"name":  "Backend Services", "percent": "60"},
+            {"name":  "Flutter", "percent": "50"}
+        ],
+        "lblLanguage":"Language",
+        "languageSkills":[
+            {"language":  "English", "rating": "8"},
+            {"language":  "Spanish", "rating": "10"}
+        ],
+        "lblCoding":"Coding",
+        "codingSkills":[
+            {"numberOne": "65", "labelOne": "Node.js","numberTwo": "35", "labelTwo": "Python"},
+            {"numberOne": "65", "labelOne": "Vue.js", "numberTwo": "35", "labelTwo": "Flutter"}
+        ],
+        "knowledgeSkills":[
+            "Website hosting",
+            "Android and iOS apps",
+            "Arduino and Raspberry Pi Dev"
+        ],
+        "lblKnowledge":"KNOWLEDGE"
+
+
+    }
+]
