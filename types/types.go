@@ -20,6 +20,9 @@ var PriceType = graphql.NewObject(
 			"desc": &graphql.Field{
 				Type: graphql.NewList(graphql.String),
 			},
+			"labelBuy": &graphql.Field{
+				Type: graphql.String,
+			},
 		},
 	},
 )
@@ -28,16 +31,28 @@ var ServiceType = graphql.NewObject(
 	graphql.ObjectConfig{
 		Name: "Service",
 		Fields: graphql.Fields{
-			"title": &graphql.Field{
+			"titleOne": &graphql.Field{
 				Type: graphql.String,
 			},
-			"subTitle": &graphql.Field{
+			"subTitleOne": &graphql.Field{
 				Type: graphql.String,
 			},
-			"desc": &graphql.Field{
+			"descOne": &graphql.Field{
 				Type: graphql.String,
 			},
-			"srcBg": &graphql.Field{
+			"srcBgOne": &graphql.Field{
+				Type: graphql.String,
+			},
+			"titleTwo": &graphql.Field{
+				Type: graphql.String,
+			},
+			"subTitleTwo": &graphql.Field{
+				Type: graphql.String,
+			},
+			"descTwo": &graphql.Field{
+				Type: graphql.String,
+			},
+			"srcBgTwo": &graphql.Field{
 				Type: graphql.String,
 			},
 		},
@@ -70,7 +85,7 @@ var LanguageSkillType = graphql.NewObject(
 				Type: graphql.String,
 			},
 			"rating": &graphql.Field{
-				Type: graphql.String,
+				Type: graphql.Int,
 			},
 		},
 	},
@@ -169,22 +184,13 @@ var FamType = graphql.NewObject(
 	graphql.ObjectConfig{
 		Name: "FactsAboutMe",
 		Fields: graphql.Fields{
-			"lblAge": &graphql.Field{
+			"label": &graphql.Field{
 				Type: graphql.String,
 			},
-			"age": &graphql.Field{
+			"desc": &graphql.Field{
 				Type: graphql.String,
 			},
-			"lblResidence": &graphql.Field{
-				Type: graphql.String,
-			},
-			"residence": &graphql.Field{
-				Type: graphql.String,
-			},
-			"lblState": &graphql.Field{
-				Type: graphql.String,
-			},
-			"state": &graphql.Field{
+			"icon": &graphql.Field{
 				Type: graphql.String,
 			},
 		},
@@ -204,14 +210,23 @@ var CvType = graphql.NewObject(
 			"degree": &graphql.Field{
 				Type: graphql.String,
 			},
+			"bgImage": &graphql.Field{
+				Type: graphql.String,
+			},
+			"myImage": &graphql.Field{
+				Type: graphql.String,
+			},
 			"menuList": &graphql.Field{
 				Type: graphql.NewList(graphql.String),
 			},
 			"aboutMe": &graphql.Field{
 				Type: graphql.String,
 			},
+			"lblAboutMe": &graphql.Field{
+				Type: graphql.String,
+			},
 			"factsAboutMe": &graphql.Field{
-				Type: FamType,
+				Type: graphql.NewList(FamType),
 			},
 			"lblMyServices": &graphql.Field{
 				Type: graphql.String,

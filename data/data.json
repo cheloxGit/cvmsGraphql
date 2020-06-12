@@ -1,24 +1,28 @@
 [
     {
         "id": 1,
-        "fullName": "Marcelo Sanchez",
+        "fullName": "Marcelo Sanchez Salazar",
         "degree": "Systems Engineer",
+        "bgImage": "https://flevix.com/wp-content/uploads/2019/12/Motion-Background.svg",
+        "myImage": "../assets/myImage.png",
         "menuList": ["About Me", "Resume", "Works"],
-        "aboutMe": "My name is Marcelo Sanchez Salazar, Freelancer. I have rich experience in web site design and building and customization, also I am good at wordpress. I love to talk with you about our unique.",
-        "factsAboutMe":{
-            "lblAge":"Age",
-            "age": "39",
-            "lblResidence": "Residence",
-            "residence": "Bolivia",
-            "lblState": "Freelance",
-            "state": "Available"
-            },
+        "aboutMe": "My name is Marcelo Sanchez Salazar, I am a Freelancer. I have rich experience in web site design, building and customization.",
+        "lblAboutMe": "About Me",
+        "factsAboutMe":[
+            {"label":"Age", "desc":"40", "icon":"mdi-cake-variant"},
+            {"label":"Residence", "desc":"Bolivia", "icon":"mdi-home-variant"},
+            {"label":"Freelance", "desc":"Available", "icon":"mdi-clipboard-account"}
+        ],
         "lblMyServices":"My Services",
         "services": [
-            {"title":"Web Development","subTitle":"Vue.js","desc":"This CV was development under Vue.js. Here is the Product","src_bg":"https://cdn.vuetifyjs.com/images/cards/docks.jpg"},
-            {"title":"Mobile Hybrid Dev","subTitle":"Flutter","desc":"Recently work with Flutter to deploy.Here is the Product","src_bg":"https://cdn.vuetifyjs.com/images/cards/docks.jpg"},
-            {"title":"Python Developer","subTitle":"Python as Backservice","desc":"Python as Backservice Working on multiple projects with Python, Pandas, Requests, Selenium, API, etc. Here is the Product","src_bg":"https://cdn.vuetifyjs.com/images/cards/docks.jpg"},
-            {"title":"Robotics Dev","subTitle":"Arduino and Raspberry PI","desc":"Private works with Arduino, NodeMCU, Raspberry PI, GSM, CNC, Follow cars, etc. Here is the Product","src_bg":"https://cdn.vuetifyjs.com/images/cards/docks.jpg"}
+            {
+             "titleOne":"","subTitleOne":"Vue.js","descOne":"This CV was development under Vue.js. Here is the Product","srcBgOne":"https://assets.atlanticbt.com/content/uploads/2019/12/g_feature-web-development-3.svg",
+             "titleTwo":"","subTitleTwo":"Flutter","descTwo":"Recently work with Flutter to deploy.Here is the Product","srcBgTwo":"https://aspgems.com/wp-content/uploads/2020/01/flutter-dart.png"
+            },
+            {
+             "titleOne":"","subTitleOne":"Python as Backservice","descOne":"Python as Backservice Working on multiple projects with Python, Pandas, Requests, Selenium, API, etc. Here is the Product","srcBgOne":"https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
+             "titleTwo":"","subTitleTwo":"Arduino and Raspberry PI","descTwo":"Private works with Arduino, NodeMCU, Raspberry PI, GSM, CNC, Follow cars, etc. Here is the Product","srcBgTwo":"https://i.pinimg.com/564x/99/72/cc/9972cc0616839c658d531ccccfe81274.jpg"
+            }
         ],
         "lblPricing":"Pricing",
         "price": [
@@ -26,11 +30,15 @@
                 "number":"15",
                 "lapse":"hour",
                 "desc":[
-                    "Web Development",
-                    "Advertising",
-                    "Game Development",
-                    "Music Writing",
-                    "Photography"
+                    "Vue Support",
+                    "Flutter Support (iOS, Android",
+                    "Python Support",
+                    "Node.js Support",
+                    "Docker Support",
+                    "PHP Support",
+                    "Arduino Support",
+                    "XCode Support",
+                    "OpenCV Support"
                 ],
                 "labelBuy":"BUY BASIC"
             },{
@@ -38,11 +46,16 @@
                 "number":"20",
                 "lapse":"hour",
                 "desc":[
-                    "Web Development",
-                    "Advertising",
-                    "Game Development",
-                    "Music Writing",
-                    "Photography"
+                    "Vue Development",
+                    "Flutter Development",
+                    "Python Development",
+                    "Node.js Development",
+                    "Docker Build",
+                    "PHP Development",
+                    "Arduino Development",
+                    "OpenCV Development",
+                    "BI Development",
+                    "Oracle Development"
                 ],
                 "labelBuy":"BUY PRO"
             }
@@ -50,31 +63,31 @@
         "lblFunFacts":"Fun Facts",
         "funFacts": [
             {
-                "number":"80",
+                "number":"3",
                 "desc":[
-                    "Albumes",
-                    "Listened"
+                    "Countries",
+                    "Visited"
                 ]
             },
             {
-                "number":"80",
+                "number":"5",
                 "desc":[
-                    "Albumes",
-                    "Listened"
+                    "Domotics Products",
+                    "Deployed"
                 ]
             },
             {
-                "number":"80",
+                "number":"3",
                 "desc":[
-                    "Albumes",
-                    "Listened"
+                    "Models Printed",
+                    "On 3D Printer"
                 ]
             },
             {
-                "number":"80",
+                "number":"3",
                 "desc":[
-                    "Albumes",
-                    "Listened"
+                    "Country",
+                    "Visited"
                 ]
             }
         ],
@@ -87,9 +100,12 @@
         ],
         "lblTestimonials":"Testimonials",
         "testimonials":[
-            {"name": "Marcelo", "testimonial":"Great work!"},
-            {"name": "Juan Paco", "testimonial":"Beautiful designs!"},
-            {"name": "Pedro", "testimonial":"Innovative!"}
+            {"name": "Carla Castro", "testimonial":"Very Proactive!"},
+            {"name": "Vivian Montaño", "testimonial":"Beautiful designs!"},
+            {"name": "Francisco Viloria", "testimonial":"Innovative!"},
+            {"name": "Andres Eterovic", "testimonial":"Innovative!"},
+            {"name": "Silvana Lopez", "testimonial":"Innovative!"},
+            {"name": "Fernando Terrazas", "testimonial":"Innovative!"}
         ],
         "lblResume":"Resume",
         "lblExperience":"Experience",
@@ -111,8 +127,8 @@
         ],
         "lblLanguage":"Language",
         "languageSkills":[
-            {"language":  "English", "rating": "8"},
-            {"language":  "Spanish", "rating": "10"}
+            {"language":  "English", "rating": 8},
+            {"language":  "Spanish", "rating": 10}
         ],
         "lblCoding":"Coding",
         "codingSkills":[
@@ -125,7 +141,5 @@
             "Arduino and Raspberry Pi Dev"
         ],
         "lblKnowledge":"KNOWLEDGE"
-
-
     }
 ]

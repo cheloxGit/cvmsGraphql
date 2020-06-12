@@ -9,14 +9,7 @@ import (
 	"github.com/friendsofgo/graphiql"
 )
 
-type reqBody struct {
-	Query string `json:"query"`
-}
-
 func main() {
-	// c := cors.New(cors.Options{
-	// 	AllowedOrigins: []string{"http://foo.com"},
-	// })
 	fmt.Println("Starting the application at :3000...")
 	graphiqlHandler, err := graphiql.NewGraphiqlHandler("/graphql")
 	if err != nil {

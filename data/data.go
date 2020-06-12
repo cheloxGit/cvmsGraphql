@@ -12,7 +12,7 @@ import (
 //RetrieveCVMSFromFile func
 func RetrieveCVMSFromFile() func() []resolvers.CV {
 	return func() []resolvers.CV {
-		jsonf, err := os.Open("./data.json")
+		jsonf, err := os.Open("data/data.json")
 
 		if err != nil {
 			fmt.Printf("failed to open json file, error: %v", err)

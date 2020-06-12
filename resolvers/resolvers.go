@@ -9,28 +9,30 @@ type User struct {
 
 //Price struct
 type Price struct {
-	Label  string   `json:"label"`
-	Number string   `json:"number"`
-	Lapse  string   `json:"lapse"`
-	Desc   []string `json:"descBasic"`
+	Label    string   `json:"label"`
+	Number   string   `json:"number"`
+	Lapse    string   `json:"lapse"`
+	Desc     []string `json:"desc"`
+	LabelBuy string   `json:"labelBuy"`
 }
 
 //Service struct
 type Service struct {
-	Title    string `json:"title"`
-	SubTitle string `json:"subTitle"`
-	Desc     string `json:"desc"`
-	SrcBg    string `json:"srcBg"`
+	TitleOne    string `json:"titleOne"`
+	SubTitleOne string `json:"subTitleOne"`
+	DescOne     string `json:"descOne"`
+	SrcBgOne    string `json:"srcBgOne"`
+	TitleTwo    string `json:"titleTwo"`
+	SubTitleTwo string `json:"subTitleTwo"`
+	DescTwo     string `json:"descTwo"`
+	SrcBgTwo    string `json:"srcBgTwo"`
 }
 
 //FactsAboutMe struct
 type FactsAboutMe struct {
-	LblAge       string `json:"lblAge"`
-	Age          string `json:"age"`
-	LblResidence string `json:"lblResidence"`
-	Residence    string `json:"residence"`
-	LblState     string `json:"lblState"`
-	State        string `json:"state"`
+	Label string `json:"label"`
+	Desc  string `json:"desc"`
+	Icon  string `json:icon`
 }
 
 //CodingSkill struct
@@ -44,7 +46,7 @@ type CodingSkill struct {
 //LanguageSkill struct
 type LanguageSkill struct {
 	Language string `json:"language"`
-	Rating   string `json:"rating"`
+	Rating   int    `json:"rating"`
 }
 
 //LinearSkill struct
@@ -92,9 +94,12 @@ type CV struct {
 	ID              int             `json:"id"`
 	FullName        string          `json:"fullName"`
 	Degree          string          `json:"degree"`
+	BgImage         string          `json:"bgImage"`
+	MyImage         string          `json:"myImage"`
 	MenuList        []string        `json:"menuList"`
 	AboutMe         string          `json:"aboutMe"`
-	FactsAboutMe    FactsAboutMe    `json:"factsAboutMe"`
+	LblAboutMe      string          `json:"lblAboutMe"`
+	FactsAboutMe    []FactsAboutMe  `json:"factsAboutMe"`
 	LblMyServices   string          `json:"lblMyServices"`
 	Services        []Service       `json:"services"`
 	LblPricing      string          `json:"lblPricing"`
