@@ -1,11 +1,8 @@
 {
-  "posts": [
+  "employee": [
     {
-      "id": 1,
       "title": "hello"
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "success": "1"
 }
