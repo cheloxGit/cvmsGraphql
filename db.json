@@ -1,8 +1,10 @@
-"emp":[
-      "employee": [
-        {
-          "title": "hello"
-        }
-      ],
-      "success": "1"
-  ]
+{
+  "posts": [
+    {
+      "title": "hello"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
